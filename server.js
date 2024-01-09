@@ -13,8 +13,13 @@ const app = express()
 
 
 // mount routes
+app.get('/', function(req, res) {
+  res.send(`<h1>Mulder, it's me</h1>`)
+})
 
-
+app.get('/home', function(req, res) {
+  res.send(`<h1>Home Page</h1>`)
+})
 
 // tell the app to listen on port 3000
 app.listen(3000, function() {
